@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="puzzle.css">
+    
+    <title>Tile Sliding Puzzle</title>
+</head>
+<body onload="endGame()">
+
+    <div class="container">
+        
+        <div class="grid-container">
+            <h2> Initial Grid </h2>
+            <div class="grid start">
+                <div class="row">
+                    <div id="tile6" class="cell" data-pos="0,0"><span>6</span></div>
+                    <div id="tile4" class="cell" data-pos="0,1"><span>4</span></div>
+                    <div id="tile7" class="cell" data-pos="0,2"><span>7</span></div>
+                </div>
+                <div class="row">
+                        <div id="tile8" class="cell" data-pos="1,0"><span>8</span></div>
+                        <div id="tile5" class="cell" data-pos="1,1"><span>5</span></div>
+                        <div class="cell" id="empty" data-pos="1,2"></div>
+                </div>
+                <div class="row">
+                        <div id="tile3" class="cell" data-pos="2,0"><span>3</span></div>
+                        <div id="tile2" class="cell" data-pos="2,1"><span>2</span></div>
+                        <div id="tile1" class="cell" data-pos="2,2"><span>1</span></div>
+                </div>
+            </div>
+
+            <button class="btn" onclick="randomizeLoop(18)"> Randomize </button>
+        </div>
+
+        <div class="grid-container">
+            <h2> Goal Grid </h2>
+            <div class="grid goal">
+                <div class="row"> 
+                    <div class="cell"><span>1</span></div>
+                    <div class="cell"><span>2</span></div>
+                    <div class="cell"><span>3</span></div>
+                </div>
+                <div class="row"> 
+                    <div class="cell"><span>4</span></div>
+                    <div class="cell"><span>5</span></div>
+                    <div class="cell"><span>6</span></div>
+                </div>
+                <div class="row"> 
+                    <div class="cell"><span>7</span></div>
+                    <div class="cell"><span>8</span></div>
+                    <div class="cell"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Congragulations !</h2>
+              </div>
+              <div class="modal-body">
+                <p>Winner !</p>
+              </div>
+              <div class="modal-footer"><h3>&#x2728 &#x2728 &#x2728 &#x2728 &#x2728 &#x2728</h3></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/puzzle.js"></script>
+</body>
+</html>
